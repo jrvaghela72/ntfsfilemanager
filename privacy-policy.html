@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="wrap">
+<div class="wrap legal">
 
   <header class="site">
     <div class="mark">📁</div>
@@ -24,42 +24,123 @@
   </nav>
 
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="meta">Last updated: September 2026</p>
-  <p class="subtitle">The short version: this app doesn't collect, store, or transmit your personal data or your files to anyone — everything happens on your device.</p>
+  <p class="meta">Effective date: September 2, 2026 · Applies to app version 1.0.0 and later</p>
+  <p class="subtitle">The short version: NTFS File Manager does not collect, store, transmit, sell, or share your personal data or the contents of your files. The app has no account system, no analytics, no advertising, and no server of its own — everything it does happens locally on your device.</p>
 
-  <h2>What this app does with your data</h2>
-  <p>NTFS File Manager is an offline, local file management tool. It reads, writes, copies, moves, deletes, and displays files that already exist on your device's internal storage or a connected USB (OTG) drive. It has no account system, no login, no cloud sync, and no backend server of its own. Your files never leave your device through this app.</p>
+  <div class="toc">
+    <p class="toc-label">Contents</p>
+    <ol>
+      <li><a href="#introduction">1. Introduction &amp; scope</a></li>
+      <li><a href="#no-collection">2. Information we do not collect</a></li>
+      <li><a href="#permissions">3. Permissions we request, and exactly why</a></li>
+      <li><a href="#play-services">4. Data handled by Google Play system services</a></li>
+      <li><a href="#local-data">5. Data the app creates and stores on your device</a></li>
+      <li><a href="#use">6. How information is used</a></li>
+      <li><a href="#sharing">7. Data sharing, sale, and disclosure</a></li>
+      <li><a href="#security">8. Data security</a></li>
+      <li><a href="#retention">9. Data retention and deletion</a></li>
+      <li><a href="#rights">10. Your privacy rights (GDPR, CCPA/CPRA, and others)</a></li>
+      <li><a href="#transfers">11. International data transfers</a></li>
+      <li><a href="#children">12. Children's privacy</a></li>
+      <li><a href="#third-party-links">13. Third-party links and services</a></li>
+      <li><a href="#open-source">14. Open-source components</a></li>
+      <li><a href="#changes">15. Changes to this policy</a></li>
+      <li><a href="#contact">16. Contact us</a></li>
+    </ol>
+  </div>
 
-  <h2>Permissions this app requests, and why</h2>
+  <h2 id="introduction">1. Introduction &amp; scope</h2>
+  <p>This Privacy Policy explains, in specific and complete terms, how the NTFS File Manager Android application (the "App," "we," "us," or "the Developer") handles information when you download, install, and use it. It is written to satisfy the disclosure requirements of the Google Play Developer Program Policies — including the User Data policy and the Permissions policy for sensitive permissions such as All Files Access and Query All Packages — and to give you an accurate, complete account of the App's data practices rather than a generic template.</p>
+  <p>This Policy covers the App itself. It does not cover: (a) the operating-system-level services described in Section 4, which Google, not the Developer, operates and controls; (b) third-party apps you choose to open a file with, or destinations you navigate to via links in the App (see Section 13); or (c) any website, repository, or service not operated by the Developer. By installing or using the App, you acknowledge that you have read and understood this Policy.</p>
+
+  <h2 id="no-collection">2. Information we do not collect</h2>
+  <p>The App is an offline, local file-management utility. It reads, writes, copies, moves, renames, deletes, compresses, and displays files that already exist on your device's internal storage or on a connected USB (OTG) drive. To be specific about what that means for your privacy, the App does not have, and cannot use, any of the following:</p>
   <ul>
-    <li><strong>All Files Access / Storage permissions</strong> — required to browse, read, and write files on your device. Requested only when you first use a feature that needs it, not on install.</li>
-    <li><strong>USB device access</strong> — requested only when you connect a USB drive, so the app can communicate with it directly.</li>
-    <li><strong>Notifications</strong> — used only to show progress for file transfers, compression, and drive formatting, so you can see and control a long-running operation (including from outside the app). Requested only right before the first time it's needed.</li>
+    <li>An account system, registration, login, or user profile of any kind.</li>
+    <li>A backend server, cloud storage, or sync service operated by the Developer. There is nowhere for your files or data to be sent, because no such destination exists in the App.</li>
+    <li>Advertising SDKs, advertising identifiers, or ad-tracking technology of any kind.</li>
+    <li>Analytics or telemetry SDKs (e.g., no Firebase Analytics, no third-party crash-reporting SDKs, no session-replay or behavioral-tracking libraries) bundled by the Developer.</li>
+    <li>Access to your contacts, call logs, SMS/MMS messages, calendar, precise or coarse location, camera, microphone, or biometric sensors. The App neither requests nor uses any permission covering these categories.</li>
+    <li>Any mechanism to read the contents, filenames, metadata, or existence of your files and transmit them off your device. Every read, write, copy, move, or delete operation the App performs stays entirely within your device's own storage.</li>
   </ul>
-  <p>None of these permissions are used to collect information about you — they exist solely so the app can perform the file operations you explicitly ask it to.</p>
 
-  <h2>Safe Folder</h2>
-  <p>The optional Safe Folder feature gates a hidden folder behind your device's own lock screen credential (PIN, pattern, password, or biometric). The app never receives, stores, or has any access to your credential itself — that confirmation is handled entirely by Android's own system security, the same way unlocking your phone works.</p>
+  <h2 id="permissions">3. Permissions we request, and exactly why</h2>
+  <p>Every permission the App declares is a permission it actually uses for a specific, user-visible file-management function. None of them are used to collect information about you, and each is requested only at the point it is actually needed — not in a bundle at first launch.</p>
 
-  <h2>Google Play services used by this app</h2>
-  <p>This app uses a small number of Google Play services strictly for app maintenance — none of them are used for advertising, tracking, or analytics of your file activity:</p>
+  <h3>Storage access — All Files Access (Android 11+) / legacy storage permissions (Android 12 and earlier)</h3>
+  <p>File management is the App's entire purpose, so direct access to your device's shared storage (<code>MANAGE_EXTERNAL_STORAGE</code> on Android 11 and later, or the legacy <code>READ_EXTERNAL_STORAGE</code>/<code>WRITE_EXTERNAL_STORAGE</code> permissions on Android 12 and earlier) is the one permission the App genuinely cannot function without. <strong>Prominent in-app disclosure:</strong> before the system's All Files Access settings screen is ever shown, the App first displays its own explanation screen stating exactly why the permission is required and what will not work without it; you must take an explicit action on that screen before the system permission flow opens. The App uses this permission exclusively to let you browse, open, copy, move, rename, delete, compress, and otherwise manage files you choose, on storage you choose. It is never used to scan, catalogue, index, upload, or transmit your files or file listings to the Developer or to any third party.</p>
+
+  <h3>Media permissions (Android 13+) — READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO</h3>
+  <p>These granular media permissions supplement All Files Access on newer Android versions so the App can generate thumbnails and read metadata (such as image dimensions or audio/video duration) for the Photos, Videos, and Music quick-category views and the file-properties panel. They are used solely to render those files' previews and details inside the App on your screen.</p>
+
+  <h3>USB device access</h3>
+  <p>Requested only when you physically connect a USB (OTG) drive, through Android's standard USB-host permission dialog, so the App can communicate with that specific drive directly (to mount, read, and write NTFS or exFAT volumes). This access is scoped to the device you approve and is not requested speculatively.</p>
+
+  <h3>Notifications (POST_NOTIFICATIONS, Android 13+)</h3>
+  <p>Used only to show and let you control the progress of long-running operations — file transfers, compression, and drive formatting — including while you are outside the App, and to let you pause, cancel, or resume them. Requested the first time such an operation is about to run, not at install.</p>
+
+  <h3>Foreground service (FOREGROUND_SERVICE, FOREGROUND_SERVICE_DATA_SYNC)</h3>
+  <p>Lets a file transfer, compression, or format operation you started keep running with a visible, ongoing notification if you navigate away from the App, rather than being silently killed by the operating system. This does not run in the background without your knowledge — the persistent notification required by Android for this permission is always visible while it is active.</p>
+
+  <h3>Query all installed apps (QUERY_ALL_PACKAGES)</h3>
+  <p>The App's Apps feature lets you view, launch, back up (extract as an APK), and manage the applications installed on your device — a file-management capability the Google Play Permissions policy specifically recognizes as an approved use of this permission for file-manager apps that work with the widest array of file types, including APKs. This permission only lets the App read the on-device list of installed packages (package name, label, icon, version) so it can display them to you; that list is never transmitted anywhere or logged by the Developer.</p>
+
+  <h3>Internet (INTERNET)</h3>
+  <p>The App's own code performs no network requests of any kind — it does not phone home, check a server, or upload anything. This permission exists solely so your device can reach Google Play's own servers for the two Play platform features described in Section 4 (in-app update checks and the in-app review prompt). If those two features are disabled or unavailable, the App has no other use for network connectivity.</p>
+
+  <h2 id="play-services">4. Data handled by Google Play system services</h2>
+  <p>The App integrates three Google Play platform features. Each is Google's own infrastructure, operating under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> — the Developer does not receive, store, or process the data these features handle, and cannot configure them beyond what Google Play provides by default:</p>
   <ul>
-    <li><strong>Play In-App Updates</strong> — checks whether a newer version of the app is available and can offer to download it in the background. This involves your device contacting Google Play; it does not involve any data from your files.</li>
-    <li><strong>Play In-App Review</strong> — occasionally, after clear successful use of the app, may offer Google's built-in review prompt. The app never learns whether you actually left a review.</li>
-    <li><strong>Android Vitals (crash reporting)</strong> — once this app is published, Google Play automatically collects crash/ANR reports (like stack traces and device info) to help diagnose bugs, the same way it does for every app on Play. This is Google's own service, governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, and is not something this app configures beyond what Play provides by default.</li>
+    <li><strong>Play In-App Updates</strong> — checks whether a newer version of the App is available on Google Play and can download it in the background so you can install it without leaving the App. This involves your device contacting Google Play's servers; it does not involve any data from your files or file activity.</li>
+    <li><strong>Play In-App Review</strong> — after clear, successful use of the App, may show Google's own built-in review prompt. The Developer never learns whether you were shown the prompt, dismissed it, or left a rating.</li>
+    <li><strong>Android Vitals (automatic crash &amp; ANR reporting)</strong> — once the App is published, Google Play automatically collects basic crash and "Application Not Responding" diagnostics (such as stack traces, device model, and OS version) for every app distributed on Play, to help identify stability problems. This is a standard Google Play platform feature, not something the Developer adds, configures, or receives raw access to beyond the aggregated diagnostics Google Play Console exposes to all developers for their own apps.</li>
+  </ul>
+  <p>None of these three features are used for advertising, cross-app tracking, or building a profile of your file activity.</p>
+
+  <h2 id="local-data">5. Data the app creates and stores on your device</h2>
+  <p>To provide certain features, the App stores small amounts of data locally, entirely within its own private app storage or within folders you control on your device. None of it is transmitted anywhere; all of it stays under your control and is removed when you clear the App's data or uninstall it (except where noted):</p>
+  <ul>
+    <li><strong>App preferences</strong> (e.g., Show Hidden Files, Show Safe Folder, USB transfer buffer size) — stored in a local, private preferences file on your device.</li>
+    <li><strong>Bookmarks</strong> — the internal-storage file/folder paths you choose to bookmark, stored locally in a private preferences file. Never available for OTG/USB paths.</li>
+    <li><strong>Trash</strong> — for internal storage only, deleting an item moves it to a hidden <code>.NtfsHelperTrash</code> folder on your own device storage rather than erasing it immediately, together with a small metadata record of its original location and deletion time, so it can be restored. Items are automatically and permanently purged from Trash after 7 days, or sooner if you empty it yourself. USB (OTG) deletions are immediate and permanent and never pass through Trash, consistent with how removable drives are conventionally treated.</li>
+    <li><strong>Thumbnail cache</strong> — small in-memory previews generated from your own images and videos to speed up browsing; not written to a persistent file and cleared when the App is closed or memory is reclaimed.</li>
+    <li><strong>Safe Folder</strong> — an optional feature that hides a folder behind your device's own lock-screen credential (PIN, pattern, password, or biometric). The App never receives, stores, processes, or has any access to your credential itself; that confirmation is handled entirely by Android's own system security APIs, the same mechanism used to unlock your device. Safe Folder restricts casual access to a folder — it is <strong>not encryption</strong>, and files inside it are stored on disk the same way as any other file on your device.</li>
   </ul>
 
-  <h2>Data shared with third parties</h2>
-  <p>None, beyond the standard Google Play services described above, which every app distributed on Google Play relies on at the platform level.</p>
+  <h2 id="use">6. How information is used</h2>
+  <p>Because the App does not collect personal information, it does not use, process, profile, analyze, or monetize any personal information — there is none for it to act on. The on-device data described in Section 5 is used exclusively to provide the specific feature it belongs to (e.g., Bookmarks are used only to show your bookmarked items; Trash metadata is used only to support restore and auto-expiry).</p>
 
-  <h2>Children's privacy</h2>
-  <p>This app is a general-purpose file management utility and is not directed at children. It does not knowingly collect personal information from anyone, including children.</p>
+  <h2 id="sharing">7. Data sharing, sale, and disclosure</h2>
+  <p>The Developer does not sell, rent, trade, or otherwise monetize any personal information — because none is collected, there is none to sell. Nor does the Developer share personal information with third parties for their own marketing or advertising purposes. The only data flows outside your device are the Google Play platform features described in Section 4, which every app distributed on Google Play relies on at the platform level and which are not initiated, controlled, or monetized by the Developer.</p>
+  <p>The Developer may disclose information if legally required to do so (for example, in response to a valid legal process) — however, as the App collects no personal information in the first place, the Developer holds none to disclose in practice.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the updated version will be posted at this same URL with a revised "last updated" date.</p>
+  <h2 id="security">8. Data security</h2>
+  <p>Your files and app data are protected by Android's standard application sandboxing and filesystem permission model, which isolates the App's own private storage from other apps on your device. Any network communication the App triggers is limited to the Google Play platform features in Section 4, which use Google's own secure (HTTPS/TLS) infrastructure. As noted in Section 5, Safe Folder restricts access via your device credential but does not encrypt files — if you require encryption-at-rest for especially sensitive files, use a dedicated encryption tool in addition to Safe Folder. No method of storage or transmission is 100% secure, and the Developer cannot guarantee absolute security, but no personal data leaving your device through the App is, by design, the App's core security posture.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy can be raised via <a href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>
+  <h2 id="retention">9. Data retention and deletion</h2>
+  <p>The Developer operates no server and therefore retains no personal data of yours anywhere off your device. On-device data is retained for as long as it is useful to you and is fully within your control: uninstalling the App removes its preferences, bookmarks, and cache; emptying Trash (or waiting out the 7-day auto-expiry) permanently removes trashed items; disabling Safe Folder removes its gating (the folder and its contents remain, simply no longer hidden behind the credential prompt).</p>
+
+  <h2 id="rights">10. Your privacy rights (GDPR, CCPA/CPRA, and others)</h2>
+  <p>Because the App does not collect, store, or process personal information about you, most data-subject rights available under the EU/UK General Data Protection Regulation ("GDPR"), the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), or similar laws elsewhere — including the rights to access, correct, delete, restrict, object to processing, or port your data — have no personal data on which to act, since the Developer holds none. Consistent with the CCPA/CPRA, the Developer does not sell or share personal information as those terms are defined by that law, and has no "Do Not Sell or Share My Personal Information" mechanism to offer because no sale or sharing occurs.</p>
+  <p>If you nonetheless believe the Developer holds personal information about you, or you have questions about your rights under any applicable law, contact the Developer using the channel in Section 16 and your request will be reviewed and responded to.</p>
+
+  <h2 id="transfers">11. International data transfers</h2>
+  <p>Because no personal information is collected or transmitted to the Developer, no cross-border transfer of personal data by the Developer occurs. The Google Play platform features described in Section 4 may involve data transfers to Google's own infrastructure, which are governed by Google's Privacy Policy and Google's own data-transfer safeguards, independent of the Developer.</p>
+
+  <h2 id="children">12. Children's privacy</h2>
+  <p>The App is a general-purpose file-management utility, is not directed at children, and is not part of Google Play's Families program. The Developer does not knowingly collect personal information from anyone, including children under the age of 13 (or the equivalent minimum age in your jurisdiction). If a parent or guardian believes a child has provided personal information through the App, contact the Developer via Section 16 so it can be addressed — though, consistent with Section 2, the App has no functional mechanism to collect such information in the first place.</p>
+
+  <h2 id="third-party-links">13. Third-party links and services</h2>
+  <p>The App's Help &amp; Feedback page and in-app Settings link out to GitHub Issues (github.com) so you can report bugs or request features publicly. Any information you choose to submit there is governed by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's own Privacy Statement</a>, not this Policy. Similarly, when you use the App's "Open with" functionality to hand a file to another app of your choosing, that app's own privacy practices govern from that point on — the Developer has no visibility into or control over what that third-party app does.</p>
+
+  <h2 id="open-source">14. Open-source components</h2>
+  <p>The App's NTFS/exFAT filesystem support is built on the open-source <strong>libntfs-3g</strong> and <strong>ntfsprogs</strong> libraries. Using these components does not change any of the data practices described above — see Section 14 of our <a href="terms-of-service.html#open-source">Terms of Service</a> for licensing details and the corresponding-source offer required by their license.</p>
+
+  <h2 id="changes">15. Changes to this policy</h2>
+  <p>If this Policy changes, the updated version will be posted at this same URL with a revised effective date at the top of the page. For material changes that meaningfully affect your rights, the Developer will make reasonable efforts to provide additional notice, such as an in-app notice or a note in the App's release notes. Your continued use of the App after a change takes effect constitutes acceptance of the revised Policy. We encourage you to review this page periodically.</p>
+
+  <h2 id="contact">16. Contact us</h2>
+  <p>Questions, concerns, or requests regarding this Privacy Policy can be raised via <a href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">GitHub Issues</a>, or via the developer contact address listed on the App's Google Play Store listing.</p>
 
   <footer class="site">
     <p>NTFS File Manager · <a href="index.html">Help &amp; Feedback</a> · <a href="terms-of-service.html">Terms of Service</a></p>
