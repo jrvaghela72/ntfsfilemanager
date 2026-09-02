@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NTFS File Manager — Help &amp; Feedback</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <div class="mark">📁</div>
+    <div>
+      <h1>NTFS File Manager</h1>
+      <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
+    </div>
+  </header>
+
+  <nav class="pages">
+    <a href="index.html" class="current">Help &amp; Feedback</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </nav>
+
+  <h1 class="page-title">Help &amp; Feedback</h1>
+  <p class="subtitle">This app is fully offline and local by design — there's no account, no server, and nothing syncs anywhere. Everything below is about getting help or reaching the developer directly.</p>
+
+  <h2>Common questions</h2>
+
+  <div class="card">
+    <h3>Why does the app need "All Files Access"?</h3>
+    <p>File management is the app's entire purpose, so it needs direct access to your device's storage to browse, copy, move, and delete files. This permission is requested only when you first open the app's file browser — never bundled with anything else, and nothing is uploaded anywhere. Everything the app does with your files stays entirely on your device.</p>
+  </div>
+
+  <div class="card">
+    <h3>My OTG (USB) drive isn't showing up</h3>
+    <p>Make sure your device supports USB OTG and the cable/adapter supports data (some cables are charge-only). When you plug in a drive formatted as NTFS or exFAT, the app should detect and mount it automatically. If Android also shows its own "USB drive not supported" notification at the same time — that's expected and safe to dismiss. That notification comes from Android's own system storage service, which doesn't understand NTFS; it has no bearing on whether this app can read the drive.</p>
+  </div>
+
+  <div class="card">
+    <h3>What is Safe Folder, exactly?</h3>
+    <p>Safe Folder is a hidden folder that requires your device PIN, pattern, password, or biometric to open. It's protection against casual snooping if someone else picks up your phone — it is <strong>not encryption</strong>. Files inside it are stored the same way as any other file on your device.</p>
+  </div>
+
+  <div class="card">
+    <h3>Formatting an OTG drive failed partway through</h3>
+    <p>If a format is interrupted (drive unplugged, app killed) before it finishes, the drive may be left with a valid partition table but no usable filesystem. Reformat the drive (using this app or a PC) to recover it. Never disconnect a drive while a format or transfer is in progress — the in-app notification will tell you when it's safe to unplug.</p>
+  </div>
+
+  <h2>Report a bug or request a feature</h2>
+  <p>Bugs, crashes, and feature requests are tracked on GitHub. Please include your Android version, device model, and (for file-operation bugs) whether the issue involves internal storage or a USB drive, and NTFS or exFAT.</p>
+  <p>
+    <a class="button" href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">Open an issue on GitHub →</a>
+  </p>
+
+  <footer class="site">
+    <p>NTFS File Manager · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

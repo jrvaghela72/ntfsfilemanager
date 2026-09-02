@@ -1,0 +1,162 @@
+:root {
+  --ink: #1b1e24;
+  --ink-soft: #565b66;
+  --paper: #f5f3ee;
+  --paper-raised: #ffffff;
+  --line: #dedace;
+  --accent: #2f6f6b;
+  --accent-soft: #e3eeec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece9e1;
+    --ink-soft: #a2a8b3;
+    --paper: #14171c;
+    --paper-raised: #1b1f26;
+    --line: #333944;
+    --accent: #6fbdb6;
+    --accent-soft: #1d2c2b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+header.site .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+header.site h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+header.site .tagline {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 2px 0 0;
+}
+
+nav.pages {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+nav.pages a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+nav.pages a.current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+nav.pages a:hover {
+  color: var(--ink);
+}
+
+h1.page-title {
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+p.subtitle {
+  color: var(--ink-soft);
+  margin: 0 0 32px;
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 36px 0 10px;
+}
+
+h3 {
+  font-size: 15px;
+  margin: 22px 0 8px;
+}
+
+p, li {
+  font-size: 15px;
+  max-width: 62ch;
+}
+
+a { color: var(--accent); }
+
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button:hover { opacity: 0.9; }
+
+.meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+footer.site {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+footer.site a { color: var(--ink-soft); }
