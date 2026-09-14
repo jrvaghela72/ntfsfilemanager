@@ -4,27 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NTFS File Manager — Privacy Policy</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta name="theme-color" content="#2563eb">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="wrap legal">
 
   <header class="site">
-    <div class="mark">📁</div>
-    <div>
-      <h1>NTFS File Manager</h1>
-      <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
-    </div>
+    <a class="brand" href="index.html">
+      <img class="mark" src="assets/icon.png" width="40" height="40" alt="">
+      <div>
+        <h1>NTFS File Manager</h1>
+        <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
+      </div>
+    </a>
+    <nav class="pages">
+      <a href="index.html">Home</a>
+      <a href="help.html">Help &amp; Feedback</a>
+      <a href="privacy-policy.html" class="current">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </nav>
   </header>
 
-  <nav class="pages">
-    <a href="index.html">Help &amp; Feedback</a>
-    <a href="privacy-policy.html" class="current">Privacy Policy</a>
-    <a href="terms-of-service.html">Terms of Service</a>
-  </nav>
-
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="meta">Effective date: September 11, 2026 · Applies to app version 1.1.0 and later · <a href="#changes">What changed in this version</a></p>
+  <p class="meta">Effective date: September 14, 2026 · Applies to app version 1.1.0 and later · <a href="#changes">What changed in this version</a></p>
 
   <p class="subtitle">The short version: NTFS File Manager manages files on your device. The Developer runs no server, has no account system, and never receives your files, filenames, or file listings. But the App is <strong>not</strong> an entirely offline app, and this Policy will not pretend otherwise. It shows advertisements through Google AdMob, which collects device and advertising identifiers; it sells optional Premium subscriptions through Google Play; and it has optional features you can switch on that talk to cloud providers, network shares, and online media services. Sections 5 through 11 describe every one of those, in detail.</p>
 
@@ -148,19 +153,19 @@
   <p>Cancellation, renewal, price-change, withdrawal and refund terms are set out in Sections 5 to 7 of the <a href="terms-of-service.html">Terms of Service</a>.</p>
 
   <h2 id="cloud-storage">7. Cloud storage accounts you connect</h2>
-  <p>The App's Cloud section lets you connect your own <strong>Google Drive, Dropbox, or Microsoft OneDrive</strong> account so you can browse it and copy files to and from your device, the same way you already do with internal storage or a USB drive. This is entirely opt-in — nothing in this section happens unless you deliberately add a cloud account and complete that provider's own sign-in.</p>
+  <p>The App's Cloud section lets you connect your own <strong>Dropbox or Microsoft OneDrive</strong> account so you can browse it and copy files to and from your device, the same way you already do with internal storage or a USB drive. This is entirely opt-in — nothing in this section happens unless you deliberately add a cloud account and complete that provider's own sign-in. <strong>Google Drive is not available in this version.</strong></p>
 
   <h3>How sign-in works</h3>
-  <p>Connecting an account hands you off to that provider's own sign-in screen: Google Drive uses Android's system authorization flow through Google Play services; Dropbox uses a browser tab with PKCE; Microsoft OneDrive uses Microsoft's own authentication library. <strong>You enter your credentials directly with the provider, never with the App.</strong> The App receives back only a limited-scope access token proving you approved the connection — never your password. For Google Drive specifically, the App requests the narrowest available scope, <code>drive.file</code>, which grants access only to files the App itself created or that you explicitly open with it — not your whole Drive.</p>
+  <p>Connecting an account hands you off to that provider's own sign-in screen: Dropbox uses a browser tab with PKCE; Microsoft OneDrive uses Microsoft's own authentication library. <strong>You enter your credentials directly with the provider, never with the App.</strong> The App receives back only a limited-scope access token proving you approved the connection — never your password.</p>
 
   <h3>What the App stores, and where</h3>
   <p>The access token, and where the provider issues one the refresh token, for each connected account is stored in <code>EncryptedSharedPreferences</code>, encrypted at rest under a key held in your device's Android Keystore. It stays on your device and is never sent to the Developer, because the Developer has no server to send it to. Disconnecting an account, or uninstalling the App, removes it.</p>
 
   <h3>What happens when you copy a file</h3>
-  <p>When you copy or move a file between your device and a connected cloud account, that file's bytes travel directly between your device and the provider's own servers over an encrypted (TLS) connection. The Developer's infrastructure is not part of that path in any way, and the Developer cannot see, log, or retain the file, its name, or its contents. Once a file lands on the provider's side it is subject to that provider's own storage and privacy practices, not this Policy — see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>, <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox</a> and <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft</a>.</p>
+  <p>When you copy or move a file between your device and a connected cloud account, that file's bytes travel directly between your device and the provider's own servers over an encrypted (TLS) connection. The Developer's infrastructure is not part of that path in any way, and the Developer cannot see, log, or retain the file, its name, or its contents. Once a file lands on the provider's side it is subject to that provider's own storage and privacy practices, not this Policy — see <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox</a> and <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft</a>.</p>
 
   <h3>Your control over a connected account</h3>
-  <p>You can disconnect any cloud account at any time from the App's Cloud section, which deletes its stored token from your device and stops the App accessing that account. The App attempts to revoke the token with the provider where that provider supports revocation. Disconnecting does not delete anything from the provider's side. As a belt-and-braces step you can also review and revoke the App's access directly in your account settings on the provider's own website — for example, Google Account → Security → Your connections to third-party apps.</p>
+  <p>You can disconnect any cloud account at any time from the App's Cloud section, which deletes its stored token from your device and stops the App accessing that account. The App attempts to revoke the token with the provider where that provider supports revocation. Disconnecting does not delete anything from the provider's side. As a belt-and-braces step you can also review and revoke the App's access directly in your account settings on the provider's own website.</p>
 
   <h2 id="network-clients">8. Network locations you connect (SMB, SFTP, FTP, WebDAV)</h2>
   <p>The App's Network section lets you connect to file servers you already have access to, using the <strong>SMB, SFTP, FTP, FTPS and WebDAV</strong> protocols — for example a NAS on your home network, or a work file share.</p>
@@ -270,7 +275,7 @@
   <p>Because the App serves advertising, this matters: the Developer does not knowingly collect personal information from, or permit personalized advertising to be served to, children below the applicable age, and the App does not request the data categories that would require child-directed treatment. If you are a parent or guardian and believe a child below the applicable age has used the App, contact the Developer at Section 25 and the Developer will take reasonable steps to address it — though, as set out in Section 3, the Developer holds no account or profile data that could identify the child. Advertising data collected by Google can be removed by deleting the device's advertising identifier in Android Settings.</p>
 
   <h2 id="third-party-links">22. Third-party links and services</h2>
-  <p>The App's Help &amp; Feedback page and in-app Settings link out to GitHub Issues (github.com) so you can report bugs or request features publicly. Anything you submit there is governed by <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a>, not this Policy, and a public issue is, by its nature, public. Similarly, when you use "Open with" to hand a file to another app, that app's own privacy practices govern from that point on, and the Developer has no visibility into or control over what it does.</p>
+  <p>The App's Help &amp; Feedback page and in-app Settings link out to GitHub Issues (github.com) so you can report bugs or request features publicly. Anything you submit there is governed by <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a>, not this Policy, and a public issue is, by its nature, public. The same Help page may also collect messages through a <strong>Google Form</strong> hosted by Google; answers to that form are stored with Google under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, and the Developer reads them there. Do not submit passwords, file contents, or other sensitive material through either channel. Similarly, when you use "Open with" to hand a file to another app, that app's own privacy practices govern from that point on, and the Developer has no visibility into or control over what it does.</p>
 
   <h2 id="open-source">23. Open-source components</h2>
   <p>The App's NTFS and exFAT filesystem support is built on the open-source libntfs-3g and ntfsprogs libraries, and the App uses a number of other open-source components listed in Section 26 of the Terms of Service. Using them does not change any data practice described above — see the Terms for licensing details and the corresponding-source offer required by their licences.</p>
@@ -278,6 +283,7 @@
   <h2 id="changes">24. Changes to this policy</h2>
   <p>If this Policy changes, the updated version will be posted at this same URL with a revised effective date. For material changes that meaningfully affect your rights, the Developer will provide additional notice — such as an in-app notice or a note in the release notes — before the change takes effect, and where a change requires your consent, that consent will be sought rather than assumed.</p>
   <div class="callout">
+    <p><strong>What changed on September 14, 2026.</strong> Cloud connections currently offered are Dropbox and Microsoft OneDrive. Google Drive is not available. The Help &amp; Feedback page may collect messages through a Google Form hosted by Google.</p>
     <p><strong>What changed on September 11, 2026.</strong> This is a substantial revision, made because the App itself changed substantially. The previous version of this Policy stated that the App contained no advertising and no analytics, requested no camera permission, and operated entirely offline apart from cloud storage. That is no longer accurate, and this version replaces it. Newly disclosed here: advertising through Google AdMob and the associated consent mechanism (Section 5); Premium subscriptions through Google Play Billing (Section 6); the Camera permission and Document Scanner (Sections 4 and 11); network file-share connections (Section 8); the built-in Web, WebDAV and FTP servers (Section 9); and the optional online media features (Section 10). Also corrected: the list of supported cloud providers, which is Google Drive, Dropbox and OneDrive — an earlier version incorrectly listed Box and pCloud, which the App does not support — and the Trash retention period, which is user-selectable between 7 and 90 days and defaults to 30, rather than a fixed 7 days.</p>
   </div>
 
@@ -287,7 +293,7 @@
   <p>You may also raise non-confidential matters publicly via <a href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">GitHub Issues</a>. Please do not post personal information in a public issue.</p>
 
   <footer class="site">
-    <p>NTFS File Manager · <a href="index.html">Help &amp; Feedback</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+    <p>NTFS File Manager · <a href="index.html">Home</a> · <a href="help.html">Help &amp; Feedback</a> · <a href="terms-of-service.html">Terms of Service</a></p>
   </footer>
 
 </div>
