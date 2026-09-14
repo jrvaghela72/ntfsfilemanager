@@ -4,7 +4,10 @@ Public site for the NTFS File Manager Android app: product home, Help & Feedback
 Privacy Policy, and Terms of Service. Hosted via GitHub Pages, served from this
 repo's `master` branch root.
 
-Live at: https://jrvaghela72.github.io/ntfsfilemanager/
+Live at: https://ntfsfilemanager.in/
+
+GitHub Pages still publishes from this repo's `master` branch. The old
+`https://jrvaghela72.github.io/ntfsfilemanager/` URL redirects to the custom domain.
 
 The app itself lives in a separate, private repository — this repo exists solely to
 host these public-facing pages and the public issue tracker linked from them.
