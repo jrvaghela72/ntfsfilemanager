@@ -3,19 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRMM5L4RYJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NRMM5L4RYJ');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("consent", "default", {
+  analytics_storage: "granted",
+  functionality_storage: "granted",
+  security_storage: "granted",
+  ad_storage: "denied",
+  ad_user_data: "denied",
+  ad_personalization: "denied"
+});
+gtag("js", new Date());
+gtag("config", "G-NRMM5L4RYJ");
 </script>
 <title>What we build — Custom apps, MCP, and AI workflows</title>
 <meta name="description" content="Custom web and mobile apps, Model Context Protocol integrations, automated AI workflows, internal developer tools, and on-prem MCP servers.">
 <link rel="canonical" href="https://ntfsfilemanager.in/expertise.html">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
-<meta name="theme-color" content="#09090b">
+<meta name="theme-color" content="#2563eb">
 <meta property="og:site_name" content="NTFS File Manager">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="What we build — Custom apps, MCP, and AI workflows">
@@ -47,7 +56,7 @@
 }
 </script>
 </head>
-<body class="page-expertise">
+<body class="site-shell page-expertise">
 <div class="wrap expertise">
 
   <header class="site">
@@ -67,7 +76,7 @@
     </nav>
   </header>
 
-  <section class="xp-hero">
+  <section class="xp-hero reveal">
     <p class="kicker">Our expertise</p>
     <h1 class="page-title">What we build</h1>
     <p class="lede">Specialized custom software for founders, CTOs, and product managers — apps that ship, AI that talks to your systems, and tools your engineers will actually use.</p>
@@ -75,7 +84,7 @@
 
   <section class="xp-grid" aria-label="Core services">
 
-    <a class="xp-card" href="#apps">
+    <a class="xp-card reveal" href="#apps">
       <div class="xp-visual" aria-hidden="true">
         <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
           <rect x="2" y="8" width="44" height="32" rx="5" stroke="currentColor" stroke-width="1.5"/>
@@ -89,7 +98,7 @@
       <span class="xp-more">View details</span>
     </a>
 
-    <a class="xp-card" href="#mcp">
+    <a class="xp-card reveal" href="#mcp">
       <div class="xp-visual" aria-hidden="true">
         <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
           <circle cx="14" cy="24" r="7" stroke="currentColor" stroke-width="1.5"/>
@@ -104,7 +113,7 @@
       <span class="xp-more">View details</span>
     </a>
 
-    <a class="xp-card" href="#workflows">
+    <a class="xp-card reveal" href="#workflows">
       <div class="xp-visual" aria-hidden="true">
         <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
           <rect x="4" y="16" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
@@ -119,7 +128,7 @@
       <span class="xp-more">View details</span>
     </a>
 
-    <a class="xp-card" href="#tools">
+    <a class="xp-card reveal" href="#tools">
       <div class="xp-visual" aria-hidden="true">
         <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
           <rect x="6" y="8" width="60" height="32" rx="5" stroke="currentColor" stroke-width="1.5"/>
@@ -132,7 +141,7 @@
       <span class="xp-more">View details</span>
     </a>
 
-    <a class="xp-card" href="#onprem">
+    <a class="xp-card reveal" href="#onprem">
       <div class="xp-visual" aria-hidden="true">
         <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
           <path d="M36 6l22 8v12c0 12-9.5 18.5-22 22C23.5 44.5 14 38 14 26V14l22-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -147,7 +156,7 @@
 
   </section>
 
-  <section class="xp-cta">
+  <section class="xp-cta reveal">
     <div>
       <h2>Have a custom project in mind?</h2>
       <p>A short technical discovery call — architecture, constraints, and whether we should build it. No pitch deck.</p>
@@ -159,93 +168,148 @@
   </section>
 
   <dialog id="apps" class="xp-dialog" aria-labelledby="apps-title">
-    <form method="dialog" class="xp-dialog-top">
-      <p class="kicker">Custom app development</p>
-      <button class="xp-close" value="close" aria-label="Close">Close</button>
-    </form>
-    <h2 id="apps-title">Custom Web &amp; Mobile Applications</h2>
-    <p>Production-grade apps built for scale, performance, and seamless user experience. We design the architecture, ship the interface, and leave you with something your team can operate — not a prototype that dies after the demo.</p>
-    <ul>
-      <li>Web apps, Android, and cross-platform clients with a real design system</li>
-      <li>Auth, billing, offline-tolerant storage, and performance budgets from day one</li>
-      <li>Handoff with source, environments, and a path to your own engineers</li>
-    </ul>
-    <div class="cta-row">
-      <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
-      <a class="button ghost" href="/">View Our Past Work</a>
-    </div>
+    <article class="xp-sheet">
+      <form method="dialog"><button class="xp-close" value="close" aria-label="Close"><span aria-hidden="true">×</span></button></form>
+      <div class="xp-sheet-hero">
+        <div class="xp-visual" aria-hidden="true">
+          <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
+            <rect x="2" y="8" width="44" height="32" rx="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 14h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="40" y="14" width="22" height="28" rx="4" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="46" y="18" width="10" height="16" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <p class="kicker">Custom app development</p>
+        <h2 id="apps-title">Custom Web &amp; Mobile Applications</h2>
+      </div>
+      <p class="xp-sheet-lede">Production-grade apps built for scale, performance, and seamless user experience. We design the architecture, ship the interface, and leave you with something your team can operate — not a prototype that dies after the demo.</p>
+      <p class="xp-sheet-label">What you get</p>
+      <ul class="xp-points">
+        <li><strong>Web, Android, and cross-platform</strong><span>A real design system, not a one-off set of screens.</span></li>
+        <li><strong>Ready for production</strong><span>Auth, billing, offline-tolerant storage, and performance budgets from day one.</span></li>
+        <li><strong>A clean handoff</strong><span>Source, environments, and a path for your own engineers to own it.</span></li>
+      </ul>
+      <div class="xp-sheet-actions">
+        <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
+        <a class="button ghost" href="/">View Our Past Work</a>
+      </div>
+    </article>
   </dialog>
 
   <dialog id="mcp" class="xp-dialog" aria-labelledby="mcp-title">
-    <form method="dialog" class="xp-dialog-top">
-      <p class="kicker">MCP server &amp; tooling</p>
-      <button class="xp-close" value="close" aria-label="Close">Close</button>
-    </form>
-    <h2 id="mcp-title">Model Context Protocol (MCP) Integration</h2>
-    <p>Connect AI models directly to your proprietary databases, tools, and enterprise APIs. MCP is the contract; we build the servers, auth, and tool schemas so the model can act inside your stack instead of hallucinating around it.</p>
-    <ul>
-      <li>Custom MCP servers over your data stores, tickets, files, and internal APIs</li>
-      <li>Scoped tools, audit logs, and least-privilege credentials</li>
-      <li>Works with Cursor, Claude, and other MCP-capable clients</li>
-    </ul>
-    <div class="cta-row">
-      <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
-      <a class="button ghost" href="/">View Our Past Work</a>
-    </div>
+    <article class="xp-sheet">
+      <form method="dialog"><button class="xp-close" value="close" aria-label="Close"><span aria-hidden="true">×</span></button></form>
+      <div class="xp-sheet-hero">
+        <div class="xp-visual" aria-hidden="true">
+          <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
+            <circle cx="14" cy="24" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="58" cy="12" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="58" cy="36" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M21 24h16M37 24l15-9M37 24l15 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="37" cy="24" r="3.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <p class="kicker">MCP server &amp; tooling</p>
+        <h2 id="mcp-title">Model Context Protocol (MCP) Integration</h2>
+      </div>
+      <p class="xp-sheet-lede">Connect AI models directly to your proprietary databases, tools, and enterprise APIs. MCP is the contract; we build the servers, auth, and tool schemas so the model can act inside your stack instead of guessing around it.</p>
+      <p class="xp-sheet-label">What you get</p>
+      <ul class="xp-points">
+        <li><strong>Your systems, as tools</strong><span>Custom MCP servers over data stores, tickets, files, and internal APIs.</span></li>
+        <li><strong>Least privilege</strong><span>Scoped tools, audit logs, and credentials that do not overreach.</span></li>
+        <li><strong>Client-ready</strong><span>Works with Cursor, Claude, and other MCP-capable clients.</span></li>
+      </ul>
+      <div class="xp-sheet-actions">
+        <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
+        <a class="button ghost" href="/">View Our Past Work</a>
+      </div>
+    </article>
   </dialog>
 
   <dialog id="workflows" class="xp-dialog" aria-labelledby="workflows-title">
-    <form method="dialog" class="xp-dialog-top">
-      <p class="kicker">Enterprise AI workflows</p>
-      <button class="xp-close" value="close" aria-label="Close">Close</button>
-    </form>
-    <h2 id="workflows-title">Automated AI Workflows</h2>
-    <p>Custom AI-driven pipelines, agentic automation, and LLM orchestration to streamline ops. We map the human process first, then automate the steps that are slow, repetitive, or error-prone — with a human checkpoint where it matters.</p>
-    <ul>
-      <li>Ingestion → retrieval → generation → review pipelines</li>
-      <li>Agent loops with tool use, retries, and failure states you can observe</li>
-      <li>Evaluation, cost controls, and a runbook your ops team can own</li>
-    </ul>
-    <div class="cta-row">
-      <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
-      <a class="button ghost" href="/">View Our Past Work</a>
-    </div>
+    <article class="xp-sheet">
+      <form method="dialog"><button class="xp-close" value="close" aria-label="Close"><span aria-hidden="true">×</span></button></form>
+      <div class="xp-sheet-hero">
+        <div class="xp-visual" aria-hidden="true">
+          <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
+            <rect x="4" y="16" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="28" y="6" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="28" y="26" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="52" y="16" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M20 24h8M44 14h8M44 34h8M36 22v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="kicker">Enterprise AI workflows</p>
+        <h2 id="workflows-title">Automated AI Workflows</h2>
+      </div>
+      <p class="xp-sheet-lede">Custom AI-driven pipelines, agentic automation, and LLM orchestration to streamline ops. We map the human process first, then automate the steps that are slow, repetitive, or error-prone — with a human checkpoint where it matters.</p>
+      <p class="xp-sheet-label">What you get</p>
+      <ul class="xp-points">
+        <li><strong>End-to-end pipelines</strong><span>Ingestion, retrieval, generation, and review in a sequence you can see.</span></li>
+        <li><strong>Agents with guardrails</strong><span>Tool use, retries, and failure states your ops team can observe.</span></li>
+        <li><strong>Owned by you</strong><span>Evaluation, cost controls, and a runbook — not a black box.</span></li>
+      </ul>
+      <div class="xp-sheet-actions">
+        <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
+        <a class="button ghost" href="/">View Our Past Work</a>
+      </div>
+    </article>
   </dialog>
 
   <dialog id="tools" class="xp-dialog" aria-labelledby="tools-title">
-    <form method="dialog" class="xp-dialog-top">
-      <p class="kicker">Developer &amp; internal tools</p>
-      <button class="xp-close" value="close" aria-label="Close">Close</button>
-    </form>
-    <h2 id="tools-title">Custom Developer &amp; Internal Tools</h2>
-    <p>Tailored CLI tools, dashboards, and internal automation built to eliminate engineering bottlenecks. If your team is copy-pasting between five systems, we replace that with one command or one screen.</p>
-    <ul>
-      <li>CLIs, admin dashboards, and internal portals that match how you already work</li>
-      <li>Glue for CI, feature flags, releases, and support tooling</li>
-      <li>Measured in hours saved per engineer per week, not vanity features</li>
-    </ul>
-    <div class="cta-row">
-      <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
-      <a class="button ghost" href="/">View Our Past Work</a>
-    </div>
+    <article class="xp-sheet">
+      <form method="dialog"><button class="xp-close" value="close" aria-label="Close"><span aria-hidden="true">×</span></button></form>
+      <div class="xp-sheet-hero">
+        <div class="xp-visual" aria-hidden="true">
+          <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
+            <rect x="6" y="8" width="60" height="32" rx="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 20l6 4-6 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 28h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="kicker">Developer &amp; internal tools</p>
+        <h2 id="tools-title">Custom Developer &amp; Internal Tools</h2>
+      </div>
+      <p class="xp-sheet-lede">Tailored CLI tools, dashboards, and internal automation built to eliminate engineering bottlenecks. If your team is copy-pasting between five systems, we replace that with one command or one screen.</p>
+      <p class="xp-sheet-label">What you get</p>
+      <ul class="xp-points">
+        <li><strong>Fits how you already work</strong><span>CLIs, admin dashboards, and internal portals — not generic SaaS.</span></li>
+        <li><strong>Glue that stays glued</strong><span>CI, feature flags, releases, and support tooling in one place.</span></li>
+        <li><strong>Measured in hours saved</strong><span>Per engineer, per week — not vanity features.</span></li>
+      </ul>
+      <div class="xp-sheet-actions">
+        <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
+        <a class="button ghost" href="/">View Our Past Work</a>
+      </div>
+    </article>
   </dialog>
 
   <dialog id="onprem" class="xp-dialog" aria-labelledby="onprem-title">
-    <form method="dialog" class="xp-dialog-top">
-      <p class="kicker">Local &amp; on-premises MCPs</p>
-      <button class="xp-close" value="close" aria-label="Close">Close</button>
-    </form>
-    <h2 id="onprem-title">Secure Local &amp; On-Prem Internal MCPs</h2>
-    <p>Private, on-premise MCP servers designed specifically for your team’s internal UI and sensitive data. Nothing leaves the network you choose. Same MCP interface, stricter boundary.</p>
-    <ul>
-      <li>Runs on your hardware or VPC — no tenant sharing, no surprise egress</li>
-      <li>Built for internal UIs, file stores, and regulated datasets</li>
-      <li>Deploy docs, secrets handling, and a lock-down checklist for security review</li>
-    </ul>
-    <div class="cta-row">
-      <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
-      <a class="button ghost" href="/">View Our Past Work</a>
-    </div>
+    <article class="xp-sheet">
+      <form method="dialog"><button class="xp-close" value="close" aria-label="Close"><span aria-hidden="true">×</span></button></form>
+      <div class="xp-sheet-hero">
+        <div class="xp-visual" aria-hidden="true">
+          <svg viewBox="0 0 72 48" width="72" height="48" fill="none">
+            <path d="M36 6l22 8v12c0 12-9.5 18.5-22 22C23.5 44.5 14 38 14 26V14l22-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <rect x="28" y="18" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M32 18v-2a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="kicker">Local &amp; on-premises MCPs</p>
+        <h2 id="onprem-title">Secure Local &amp; On-Prem Internal MCPs</h2>
+      </div>
+      <p class="xp-sheet-lede">Private, on-premise MCP servers designed specifically for your team’s internal UI and sensitive data. Nothing leaves the network you choose. Same MCP interface, stricter boundary.</p>
+      <p class="xp-sheet-label">What you get</p>
+      <ul class="xp-points">
+        <li><strong>Your network only</strong><span>Runs on your hardware or VPC — no tenant sharing, no surprise egress.</span></li>
+        <li><strong>Built for sensitive work</strong><span>Internal UIs, file stores, and regulated datasets.</span></li>
+        <li><strong>Ready for security review</strong><span>Deploy docs, secrets handling, and a lock-down checklist.</span></li>
+      </ul>
+      <div class="xp-sheet-actions">
+        <a class="button" href="help.html#feedback">Book a Technical Discovery Call</a>
+        <a class="button ghost" href="/">View Our Past Work</a>
+      </div>
+    </article>
   </dialog>
 
   <footer class="site">
@@ -253,6 +317,7 @@
   </footer>
 
 </div>
+<script src="assets/home.js" defer></script>
 <script src="assets/expertise.js" defer></script>
 </body>
 </html>

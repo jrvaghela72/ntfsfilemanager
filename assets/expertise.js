@@ -15,7 +15,15 @@
       if (d.open && d.id !== id) d.close();
     });
     const next = ids.has(id) ? document.getElementById(id) : null;
-    if (next instanceof HTMLDialogElement && !next.open) next.showModal();
+    if (next instanceof HTMLDialogElement && !next.open) {
+      next.showModal();
+      if (typeof gtag === "function") {
+        gtag("event", "select_content", {
+          content_type: "expertise",
+          content_id: next.id
+        });
+      }
+    }
   };
 
   dialogs.forEach((d) => {
