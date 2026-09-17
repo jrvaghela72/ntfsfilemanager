@@ -67,7 +67,7 @@ header.site a.brand {
   color: inherit;
 }
 
-header.site a.brand:hover h1 {
+header.site a.brand:hover .brand-name {
   color: var(--accent);
 }
 
@@ -80,8 +80,10 @@ header.site .mark {
   object-fit: cover;
 }
 
-header.site h1 {
+header.site .brand-name {
   font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
   margin: 0;
 }
 

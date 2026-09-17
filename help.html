@@ -5,25 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NTFS File Manager — Help &amp; Feedback</title>
 <link rel="canonical" href="https://ntfsfilemanager.in/help.html">
-<meta name="description" content="Help, common questions, and a way to reach the developer of NTFS File Manager. Report bugs and request features on GitHub.">
+<meta name="description" content="Help and common questions for NTFS File Manager — USB OTG not showing, All Files Access, cancelling Premium, ads, and how to send feedback.">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta name="theme-color" content="#2563eb">
+<meta property="og:site_name" content="NTFS File Manager">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="NTFS File Manager — Help &amp; Feedback">
+<meta property="og:description" content="Help and common questions for NTFS File Manager — USB OTG, All Files Access, Premium, and how to send feedback.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ntfsfilemanager.in/help.html">
+<meta property="og:image" content="https://ntfsfilemanager.in/assets/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NTFS File Manager — open NTFS USB drives on Android">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NTFS File Manager — Help &amp; Feedback">
+<meta name="twitter:description" content="Help and common questions for NTFS File Manager — USB OTG, All Files Access, Premium, and how to send feedback.">
+<meta name="twitter:image" content="https://ntfsfilemanager.in/assets/og.png">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does the app need \"All Files Access\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "File management is the app's entire purpose, so it needs direct access to your device's storage to browse, copy, move, and delete files. This permission is requested only when you first open the app's file browser — never bundled with anything else, and nothing is uploaded anywhere. Everything the app does with your files stays entirely on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My OTG (USB) drive isn't showing up",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure your device supports USB OTG and the cable/adapter supports data (some cables are charge-only). When you plug in a drive formatted as NTFS or exFAT, the app should detect and mount it automatically. If Android also shows its own \"USB drive not supported\" notification at the same time — that's expected and safe to dismiss. That notification comes from Android's own system storage service, which doesn't understand NTFS; it has no bearing on whether this app can read the drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Safe Folder, exactly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safe Folder is a hidden folder that requires your device PIN, pattern, password, or biometric to open. It's protection against casual snooping if someone else picks up your phone — it is not encryption. Files inside it are stored the same way as any other file on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Formatting an OTG drive failed partway through",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a format is interrupted (drive unplugged, app killed) before it finishes, the drive may be left with a valid partition table but no usable filesystem. Reformat the drive (using this app or a PC) to recover it. Never disconnect a drive while a format or transfer is in progress — the in-app notification will tell you when it's safe to unplug."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premium is a subscription billed by Google Play, and it renews automatically until you cancel. Cancel it in Google Play → Profile → Payments & subscriptions → Subscriptions, or at play.google.com/store/account/subscriptions. You keep Premium until the end of the period you've already paid for. Uninstalling the app does not cancel the subscription — you have to cancel through Google Play. Refunds are handled by Google Play, not by us; see Section 7 of the Terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I turn off ads, or personalized ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three options. Subscribing to Premium removes advertising entirely. If you're in the EEA, UK or Switzerland, the app asks for your consent before showing personalized ads and you can change or withdraw that choice any time in Settings → Privacy → Ad privacy options — refusing doesn't disable any feature. Anywhere else, you can reset or delete your advertising ID in Android Settings → Privacy → Ads. Ads never use anything from your files to target you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to use the Wi-Fi file transfer / WebDAV / FTP server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a home network you trust, yes — access is protected by a PIN you set, with lockout after repeated wrong attempts. But while a server is running, the folder you picked is reachable by anything on the same network that has your device's address and the PIN, and the browser and FTP modes don't encrypt traffic. Don't run it on public, guest, café, airport or hotel Wi-Fi. Stop the server when you're done — the ongoing notification shows you whenever one is running."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I connect Google Drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in this version. Cloud accounts you can connect are Dropbox and Microsoft OneDrive. You sign in with that provider, never with us. Google Drive is not available right now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the TV, radio and music content come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We don't host or control any of it. The app reads publicly published catalogues — iptv-org for free-to-air channels, Radio Browser for stations, Audius, the Internet Archive and Pexels for music and video — and when you play something, your device connects straight to that third party's own stream. Availability, quality and licensing are entirely up to whoever operates the stream, and a channel appearing in a list isn't a claim by us that it's licensed where you are. Rights holders can reach us at the address in Section 19 of the Terms."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap">
 
   <header class="site">
-    <a class="brand" href="index.html">
-      <img class="mark" src="assets/icon.png" width="40" height="40" alt="">
+    <a class="brand" href="/">
+      <img class="mark" src="assets/favicon.png" width="40" height="40" alt="NTFS File Manager">
       <div>
-        <h1>NTFS File Manager</h1>
+        <p class="brand-name">NTFS File Manager</p>
         <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
       </div>
     </a>
     <nav class="pages">
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <a href="help.html" class="current">Help &amp; Feedback</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-of-service.html">Terms of Service</a>
@@ -104,7 +199,7 @@
   </div>
 
   <footer class="site">
-    <p>NTFS File Manager · <a href="index.html">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+    <p>NTFS File Manager · <a href="/">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
   </footer>
 
 </div>
