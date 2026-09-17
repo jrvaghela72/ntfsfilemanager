@@ -40,6 +40,9 @@ gtag("config", "G-NRMM5L4RYJ");
 <meta name="twitter:title" content="NTFS File Manager — NTFS &amp; exFAT USB OTG on Android">
 <meta name="twitter:description" content="Open NTFS and exFAT USB OTG drives on Android with full read and write. No PC, no root.">
 <meta name="twitter:image" content="https://ntfsfilemanager.in/assets/og.png">
+<meta name="twitter:image:alt" content="NTFS File Manager — open NTFS USB drives on Android">
+<link rel="preload" href="assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/vendor/open-props.css">
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.classList.add("js");</script>
 <script type="application/ld+json">
@@ -86,62 +89,90 @@ gtag("config", "G-NRMM5L4RYJ");
 
   <header class="site">
     <a class="brand" href="/">
-      <img class="mark" src="assets/favicon.png" width="40" height="40" alt="NTFS File Manager">
-      <div>
-        <p class="brand-name">NTFS File Manager</p>
-        <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
-      </div>
+      <img class="mark" src="assets/favicon.png" width="40" height="40" alt="">
+      <span class="brand-text">
+        <span class="brand-name">NTFS File Manager</span>
+        <span class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</span>
+      </span>
     </a>
-    <nav class="pages">
-      <a href="/" class="current">Home</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg class="icon icon-open" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#menu"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#x"/></svg>
+    </button>
+    <nav class="pages" id="site-nav" aria-label="Main">
+      <a href="/" aria-current="page">Home</a>
       <a href="expertise.html">Expertise</a>
       <a href="help.html">Help &amp; Feedback</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-of-service.html">Terms of Service</a>
+      <a class="button small header-cta" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="header"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Get the app</a>
     </nav>
   </header>
 
-  <section class="hero-panel reveal">
+  <main id="main">
+
+  <section class="hero-panel reveal" aria-labelledby="hero-title">
     <div class="hero-copy">
       <p class="trial-pill"><span>120</span> days of Premium free from first install — no card, no auto-charge</p>
-      <p class="kicker">No root · no PC · NTFS &amp; exFAT</p>
-      <h1 class="page-title">Open <em>NTFS USB</em> drives on your phone</h1>
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#zap"/></svg>No root · no PC · NTFS &amp; exFAT</p>
+      <h1 class="page-title" id="hero-title">Open <em>NTFS USB</em> drives on your phone</h1>
       <p class="lede">Android will not open a Windows stick or hard disk. This app mounts NTFS and exFAT OTG drives with real read and write — copy, move, rename, ZIP, and format from the phone. Internal storage, Dropbox, OneDrive, and network shares sit in the same explorer.</p>
       <div class="cta-row">
-        <a class="button" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener">Get it on Google Play</a>
-        <a class="button ghost" href="help.html">Help &amp; Feedback</a>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="hero"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Get it on Google Play</a>
+        <a class="button ghost" href="help.html"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Help &amp; Feedback</a>
       </div>
       <ul class="chips">
-        <li>120-day Premium trial</li>
-        <li>No developer server</li>
-        <li>No account of ours</li>
-        <li>Files stay on the device</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>120-day Premium trial</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>No developer server</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>No account of ours</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Files stay on the device</li>
       </ul>
     </div>
 
     <div class="hero-visual">
       <span class="orb orb-a" aria-hidden="true"></span>
       <span class="orb orb-b" aria-hidden="true"></span>
+      <div class="float-card fc-a" aria-hidden="true">
+        <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#usb"/></svg></span>
+        <span><strong>USB drive</strong>NTFS · read &amp; write</span>
+      </div>
       <figure class="device device-lg">
-        <img src="assets/screenshots/01_home.png" width="360" height="720" alt="Home screen with internal storage and a connected USB OTG drive" fetchpriority="high" decoding="async">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/01_home.webp">
+          <img src="assets/screenshots/01_home.png" width="360" height="720" alt="Home screen with internal storage and a connected USB OTG drive" fetchpriority="high" decoding="async">
+        </picture>
       </figure>
+      <div class="float-card fc-b" aria-hidden="true">
+        <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#shield-check"/></svg></span>
+        <span><strong>On-device</strong>No server of ours</span>
+      </div>
     </div>
   </section>
 
-  <section class="features">
+  <ul class="stats reveal" aria-label="At a glance">
+    <li><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#hard-drive"/></svg></span><div><strong>NTFS, exFAT &amp; FAT</strong><span>Real read and write on OTG</span></div></li>
+    <li><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#smartphone"/></svg></span><div><strong>Android 8 or later</strong><span>No root, no PC needed</span></div></li>
+    <li><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#languages"/></svg></span><div><strong>Eleven languages</strong><span>Localised throughout</span></div></li>
+    <li><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#sparkles"/></svg></span><div><strong>120 days Premium</strong><span>From first install, no card</span></div></li>
+  </ul>
+
+  <section class="features" id="features" aria-labelledby="features-title">
     <div class="section-head reveal">
-      <p class="kicker">The product</p>
-      <h2>Inside the app</h2>
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#layers"/></svg>The product</p>
+      <h2 id="features-title">Inside the app</h2>
       <p class="section-lead">Each screen does one job. The copy next to it is what you are looking at.</p>
     </div>
 
     <div class="feature-board">
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/02_files.png" width="360" height="720" alt="File list on an NTFS USB OTG drive" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/02_files.webp">
+          <img src="assets/screenshots/02_files.png" width="360" height="720" alt="File list on an NTFS USB OTG drive" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">NTFS &amp; exFAT USB OTG</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#usb"/></svg>NTFS &amp; exFAT USB OTG</p>
         <h3>Open a Windows drive. Copy, move, ZIP, format.</h3>
         <p>A native driver gives full read and write on NTFS USB sticks and hard disks — not a read-only viewer. The same explorer works on exFAT and FAT. Format a drive as NTFS or exFAT from the phone when you need to. No PC, no root.</p>
       </div>
@@ -149,10 +180,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/03_parallel.png" width="360" height="720" alt="Parallel Storage with internal storage and USB side by side" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/03_parallel.webp">
+          <img src="assets/screenshots/03_parallel.png" width="360" height="720" alt="Parallel Storage with internal storage and USB side by side" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Premium · first 120 days free</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#columns-2"/></svg>Premium · first 120 days free</p>
         <h3>Two panes. One copy.</h3>
         <p>Parallel Storage puts internal storage, a USB drive, the cloud, or a network share next to each other so you can copy without flipping back and forth. Included for 120 days from first install.</p>
       </div>
@@ -160,10 +194,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/11_cloud.png" width="360" height="780" alt="Cloud tab with Dropbox and OneDrive accounts connected" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/11_cloud.webp">
+          <img src="assets/screenshots/11_cloud.png" width="360" height="780" alt="Cloud tab with Dropbox and OneDrive accounts connected" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Optional · Dropbox &amp; OneDrive</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#cloud"/></svg>Optional · Dropbox &amp; OneDrive</p>
         <h3>Cloud in the same explorer.</h3>
         <p>Connect Dropbox or Microsoft OneDrive when you want them. You sign in with that provider, never with us. Browse and copy alongside USB and internal storage. Disconnect anytime — files go straight to the account, not through a server of ours. Google Drive is not available in this version.</p>
       </div>
@@ -171,10 +208,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/04_network.png" width="360" height="720" alt="Built-in Wi-Fi file server with QR code and one-time passcode" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/04_network.webp">
+          <img src="assets/screenshots/04_network.png" width="360" height="720" alt="Built-in Wi-Fi file server with QR code and one-time passcode" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Wi-Fi sharing</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#wifi"/></svg>Wi-Fi sharing</p>
         <h3>Turn the phone into a file server on your LAN.</h3>
         <p>A browser file manager, WebDAV, or FTP server, behind a PIN you set, with a QR code and a rotating one-time code. Start it on a network you trust; stop it when you are done. Don’t run it on café, airport, or hotel Wi-Fi — browser and FTP modes don’t encrypt traffic.</p>
       </div>
@@ -182,10 +222,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/05_analyzer.png" width="360" height="720" alt="Storage analyzer showing used space by category" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/05_analyzer.webp">
+          <img src="assets/screenshots/05_analyzer.png" width="360" height="720" alt="Storage analyzer showing used space by category" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Always free</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#chart-pie"/></svg>Always free</p>
         <h3>See what is actually using the space.</h3>
         <p>The storage analyzer breaks internal storage down by category, largest folders, and leftover junk. It is read-only until you choose to clean. Duplicate finder (by content, not just filename) sits next to it.</p>
       </div>
@@ -193,10 +236,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/06_duplicates.png" width="360" height="720" alt="Duplicate file finder across internal storage and USB" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/06_duplicates.webp">
+          <img src="assets/screenshots/06_duplicates.png" width="360" height="710" alt="Duplicate file finder across internal storage and USB" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Always free</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#copy"/></svg>Always free</p>
         <h3>Find the same file twice — including on USB.</h3>
         <p>Duplicate finder compares content, not just names, across internal storage and a connected OTG drive. You pick what to keep. Nothing is deleted until you confirm.</p>
       </div>
@@ -204,10 +250,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/07_pdf.png" width="360" height="720" alt="PDF and document utility tools" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/07_pdf.webp">
+          <img src="assets/screenshots/07_pdf.png" width="360" height="651" alt="PDF and document utility tools" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Always free</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#file-text"/></svg>Always free</p>
         <h3>PDF tools and an on-device scanner.</h3>
         <p>Merge, split, compress, image-to-PDF, PDF-to-image, and a document scanner that photographs a page and turns it into a PDF. Text recognition runs on the device. Nothing from the camera is sent to us.</p>
       </div>
@@ -215,10 +264,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/08_music.png" width="360" height="720" alt="Music streaming and player" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/08_music.webp">
+          <img src="assets/screenshots/08_music.png" width="360" height="720" alt="Music streaming and player" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Your files, plus optional catalogues</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#music"/></svg>Your files, plus optional catalogues</p>
         <h3>Play what is on the phone — or stream what is public.</h3>
         <p>A built-in music player for tracks on the device, with optional catalogues from Audius, Radio Browser, and the Internet Archive. When you play a stream, the phone connects straight to that service. We don’t host or control any of it.</p>
       </div>
@@ -226,10 +278,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/09_radio.png" width="360" height="720" alt="Live internet radio stations" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/09_radio.webp">
+          <img src="assets/screenshots/09_radio.png" width="360" height="720" alt="Live internet radio stations" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Third-party streams</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#radio"/></svg>Third-party streams</p>
         <h3>Internet radio, in the same app.</h3>
         <p>The radio list comes from Radio Browser, a public directory. Playing a station connects you to that broadcaster’s own stream. Availability and licensing are theirs, not ours.</p>
       </div>
@@ -237,10 +292,13 @@ gtag("config", "G-NRMM5L4RYJ");
 
     <article class="feature-row reveal">
       <figure class="device">
-        <img src="assets/screenshots/10_tv.png" width="360" height="720" alt="Live TV channel list" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/10_tv.webp">
+          <img src="assets/screenshots/10_tv.png" width="360" height="720" alt="Live TV channel list" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div>
-        <p class="kicker">Third-party streams</p>
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#tv"/></svg>Third-party streams</p>
         <h3>Free-to-air live TV as an index, not a broadcast.</h3>
         <p>The app reads a publicly published channel list (iptv-org). A channel in the list is not a claim that it is licensed where you are. Rights holders can reach us through the <a href="terms-of-service.html#copyright">Terms</a>.</p>
       </div>
@@ -248,45 +306,45 @@ gtag("config", "G-NRMM5L4RYJ");
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="plans" aria-labelledby="plans-title">
     <div class="section-head">
-      <p class="kicker">Plans</p>
-      <h2>Free and Premium</h2>
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#credit-card"/></svg>Plans</p>
+      <h2 id="plans-title">Free and Premium</h2>
+      <p class="section-lead">Every new install includes <strong>120 days of Premium</strong> — no payment, and no subscription that starts on its own. After that the free tier returns, with ads, unless you subscribe. A paid plan is billed by Google Play and renews until you cancel; uninstalling does not cancel it.</p>
     </div>
-    <p class="section-lead">Every new install includes <strong>120 days of Premium</strong> — no payment, and no subscription that starts on its own. After that the free tier returns, with ads, unless you subscribe. A paid plan is billed by Google Play and renews until you cancel; uninstalling does not cancel it.</p>
     <div class="compare">
       <article class="card">
         <p class="tier-label">Free</p>
         <h3>After the trial, or without paying</h3>
-        <ul class="plain">
-          <li>Internal storage, SD card, and cloud accounts</li>
-          <li>exFAT and FAT USB drives</li>
-          <li>This phone’s browser file manager</li>
-          <li>Analyzer, cleaner, duplicate finder, PDF tools</li>
-          <li>Basic TV remote</li>
-          <li>Supported by ads</li>
+        <ul class="checks">
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Internal storage, SD card, and cloud accounts</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>exFAT and FAT USB drives</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>This phone’s browser file manager</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Analyzer, cleaner, duplicate finder, PDF tools</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Basic TV remote</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Supported by ads</li>
         </ul>
       </article>
       <article class="card featured">
-        <p class="tier-label">Premium · first 120 days free</p>
+        <p class="tier-label"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#sparkles"/></svg>Premium · first 120 days free</p>
         <h3>Unlocks the rest, removes ads</h3>
-        <ul class="plain">
-          <li>NTFS read/write on USB OTG</li>
-          <li>SMB, SFTP, FTP, and WebDAV clients</li>
-          <li>This phone’s WebDAV and FTP servers</li>
-          <li>Parallel Storage</li>
-          <li>No banner or interstitial ads</li>
-          <li>Monthly or yearly, billed by Google Play</li>
+        <ul class="checks">
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>NTFS read/write on USB OTG</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>SMB, SFTP, FTP, and WebDAV clients</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>This phone’s WebDAV and FTP servers</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Parallel Storage</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>No banner or interstitial ads</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#check"/></svg>Monthly or yearly, billed by Google Play</li>
         </ul>
       </article>
     </div>
     <p class="fine">A rewarded ad can temporarily unlock a Premium feature; declining it simply leaves that feature locked. Legacy one-time unlocks from an earlier version continue to be honoured. Details are in the <a href="terms-of-service.html#subscriptions">Terms</a>.</p>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" aria-labelledby="steps-title">
     <div class="section-head">
-      <p class="kicker">First use</p>
-      <h2>How a typical first use goes</h2>
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#plug"/></svg>First use</p>
+      <h2 id="steps-title">How a typical first use goes</h2>
     </div>
     <ol class="steps">
       <li>
@@ -305,29 +363,70 @@ gtag("config", "G-NRMM5L4RYJ");
   </section>
 
   <div class="closing reveal">
-  <section class="trust">
-    <h2>What we can and cannot see</h2>
+  <section class="trust" aria-labelledby="trust-title">
+    <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#shield-check"/></svg></span>
+    <h2 id="trust-title">What we can and cannot see</h2>
     <p>The developer runs no server, no backend, and no account system. Your files, filenames, and listings never reach us, because there is nowhere for them to go. Cloud, network, and media features talk straight from your device to the service you chose.</p>
     <p>That is not the same as “entirely offline.” The free tier shows ads through Google AdMob. Premium is billed by Google Play. Those companies receive what their own SDKs collect, as the <a href="privacy-policy.html">Privacy Policy</a> describes in full — including how to refuse personalized ads or subscribe to remove advertising entirely.</p>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band" aria-labelledby="get-title">
     <div>
-      <h2>Get NTFS File Manager</h2>
+      <h2 id="get-title">Get NTFS File Manager</h2>
       <p>120 days of Premium from first install. Android 8 or later. Eleven languages.</p>
     </div>
     <div class="cta-row">
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener">Google Play</a>
-      <a class="button ghost" href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">GitHub issues</a>
+      <a class="button light" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="closing"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Google Play</a>
+      <a class="button outline-light" href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener" data-ga="github_issues_click" data-ga-location="closing"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#bug"/></svg>GitHub issues</a>
     </div>
   </section>
   </div>
 
+  </main>
+
   <footer class="site">
-    <p>NTFS File Manager · <a href="expertise.html">Expertise</a> · <a href="help.html">Help &amp; Feedback</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="mark" src="assets/favicon.png" width="40" height="40" alt="" loading="lazy">
+          <span class="brand-text"><span class="brand-name">NTFS File Manager</span></span>
+        </a>
+        <p>Open NTFS and exFAT USB drives on Android with full read and write. No PC, no root, no account of ours.</p>
+        <a class="button small" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="footer"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Google Play</a>
+      </div>
+      <nav aria-label="Product">
+        <p class="footer-h">Product</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#plans">Free &amp; Premium</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <p class="footer-h">Support</p>
+        <ul>
+          <li><a href="help.html">Help &amp; FAQ</a></li>
+          <li><a href="help.html#feedback">Send feedback</a></li>
+          <li><a href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener" data-ga="github_issues_click" data-ga-location="footer">GitHub issues</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <p class="footer-h">Legal</p>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NTFS File Manager</p>
+      <p>Made with <a href="https://open-props.style/" target="_blank" rel="noopener">Open Props</a>, <a href="https://lucide.dev/" target="_blank" rel="noopener">Lucide</a> and <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a></p>
+    </div>
   </footer>
 
 </div>
-<script src="assets/home.js" defer></script>
+
+<script src="assets/site.js" defer></script>
 </body>
 </html>

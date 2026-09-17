@@ -40,7 +40,11 @@ gtag("config", "G-NRMM5L4RYJ");
 <meta name="twitter:title" content="NTFS File Manager — Help &amp; Feedback">
 <meta name="twitter:description" content="Help and common questions for NTFS File Manager — USB OTG, All Files Access, Premium, and how to send feedback.">
 <meta name="twitter:image" content="https://ntfsfilemanager.in/assets/og.png">
+<meta name="twitter:image:alt" content="NTFS File Manager — open NTFS USB drives on Android">
+<link rel="preload" href="assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/vendor/open-props.css">
 <link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js");</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,104 +125,179 @@ gtag("config", "G-NRMM5L4RYJ");
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ntfsfilemanager.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Help & Feedback",
+      "item": "https://ntfsfilemanager.in/help.html"
+    }
+  ]
+}
+</script>
 </head>
 <body class="site-shell">
 <div class="wrap">
 
   <header class="site">
     <a class="brand" href="/">
-      <img class="mark" src="assets/favicon.png" width="40" height="40" alt="NTFS File Manager">
-      <div>
-        <p class="brand-name">NTFS File Manager</p>
-        <p class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</p>
-      </div>
+      <img class="mark" src="assets/favicon.png" width="40" height="40" alt="">
+      <span class="brand-text">
+        <span class="brand-name">NTFS File Manager</span>
+        <span class="tagline">Fast USB OTG &amp; internal storage, direct NTFS/exFAT access</span>
+      </span>
     </a>
-    <nav class="pages">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg class="icon icon-open" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#menu"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#x"/></svg>
+    </button>
+    <nav class="pages" id="site-nav" aria-label="Main">
       <a href="/">Home</a>
       <a href="expertise.html">Expertise</a>
-      <a href="help.html" class="current">Help &amp; Feedback</a>
+      <a href="help.html" aria-current="page">Help &amp; Feedback</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-of-service.html">Terms of Service</a>
+      <a class="button small header-cta" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="header"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Get the app</a>
     </nav>
   </header>
 
-  <h1 class="page-title">Help &amp; Feedback</h1>
-  <p class="subtitle">The app has no account and the developer runs no server — nothing you do here syncs to us, and we never see your files. It is not, however, an entirely offline app: it shows ads, offers an optional Premium subscription, and has optional features that connect to cloud storage, network shares and online media. The <a href="privacy-policy.html">Privacy Policy</a> spells all of that out.</p>
+  <main id="main">
+
+  <div class="page-head">
+    <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Support</p>
+    <h1 class="page-title">Help &amp; Feedback</h1>
+    <p class="subtitle">The app has no account and the developer runs no server — nothing you do here syncs to us, and we never see your files. It is not, however, an entirely offline app: it shows ads, offers an optional Premium subscription, and has optional features that connect to cloud storage, network shares and online media. The <a href="privacy-policy.html">Privacy Policy</a> spells all of that out.</p>
+  </div>
 
   <section class="feedback-panel" id="feedback">
     <div class="feedback-aside">
+      <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#message-square"/></svg></span>
       <p class="kicker">Private · hosted by Google</p>
       <h2>Send feedback</h2>
       <p>A short Google Form. Answers are stored by Google Forms, not on a server of ours. Don’t paste passwords, recovery keys, or file contents.</p>
       <p class="feedback-note">Opens in a new tab. Google hosts the answers.</p>
       <p class="cta-row">
-        <a class="button" href="https://forms.gle/gEikfx9YLj4im2u96" target="_blank" rel="noopener">Open the Google Form</a>
+        <a class="button" href="https://forms.gle/gEikfx9YLj4im2u96" target="_blank" rel="noopener" data-ga="feedback_form_click" data-ga-location="help"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#external-link"/></svg>Open the Google Form</a>
       </p>
     </div>
     <aside class="feedback-aside">
+      <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#bug"/></svg></span>
       <p class="kicker">Public · GitHub</p>
       <h2>Open an issue</h2>
       <p>Crashes, USB mount failures, and feature requests with logs belong on GitHub. Please include Android version, device model, and whether it involves internal storage or a USB drive (NTFS or exFAT).</p>
       <p class="feedback-note">Public issues are public. Don’t post personal files or account emails there.</p>
       <p class="cta-row">
-        <a class="button" href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener">Open a GitHub issue</a>
+        <a class="button ghost" href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener" data-ga="github_issues_click" data-ga-location="help"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#external-link"/></svg>Open a GitHub issue</a>
       </p>
     </aside>
   </section>
 
-  <h2>Common questions</h2>
+  <div class="section-head">
+    <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#layers"/></svg>FAQ</p>
+    <h2 id="faq">Common questions</h2>
+  </div>
 
   <div class="faq-grid">
   <div class="card">
-    <h3>Why does the app need "All Files Access"?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Why does the app need "All Files Access"?</h3>
     <p>File management is the app's entire purpose, so it needs direct access to your device's storage to browse, copy, move, and delete files. This permission is requested only when you first open the app's file browser — never bundled with anything else, and nothing is uploaded anywhere. Everything the app does with your files stays entirely on your device.</p>
   </div>
 
   <div class="card">
-    <h3>My OTG (USB) drive isn't showing up</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>My OTG (USB) drive isn't showing up</h3>
     <p>Make sure your device supports USB OTG and the cable/adapter supports data (some cables are charge-only). When you plug in a drive formatted as NTFS or exFAT, the app should detect and mount it automatically. If Android also shows its own "USB drive not supported" notification at the same time — that's expected and safe to dismiss. That notification comes from Android's own system storage service, which doesn't understand NTFS; it has no bearing on whether this app can read the drive.</p>
   </div>
 
   <div class="card">
-    <h3>What is Safe Folder, exactly?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>What is Safe Folder, exactly?</h3>
     <p>Safe Folder is a hidden folder that requires your device PIN, pattern, password, or biometric to open. It's protection against casual snooping if someone else picks up your phone — it is <strong>not encryption</strong>. Files inside it are stored the same way as any other file on your device.</p>
   </div>
 
   <div class="card">
-    <h3>Formatting an OTG drive failed partway through</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Formatting an OTG drive failed partway through</h3>
     <p>If a format is interrupted (drive unplugged, app killed) before it finishes, the drive may be left with a valid partition table but no usable filesystem. Reformat the drive (using this app or a PC) to recover it. Never disconnect a drive while a format or transfer is in progress — the in-app notification will tell you when it's safe to unplug.</p>
   </div>
 
   <div class="card">
-    <h3>How do I cancel Premium?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>How do I cancel Premium?</h3>
     <p>Premium is a subscription billed by Google Play, and it renews automatically until you cancel. Cancel it in <strong>Google Play → Profile → Payments &amp; subscriptions → Subscriptions</strong>, or at <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a>. You keep Premium until the end of the period you've already paid for. <strong>Uninstalling the app does not cancel the subscription</strong> — you have to cancel through Google Play. Refunds are handled by Google Play, not by us; see <a href="terms-of-service.html#refunds">Section 7 of the Terms</a>.</p>
   </div>
 
   <div class="card">
-    <h3>Can I turn off ads, or personalized ads?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Can I turn off ads, or personalized ads?</h3>
     <p>Three options. Subscribing to Premium removes advertising entirely. If you're in the EEA, UK or Switzerland, the app asks for your consent before showing personalized ads and you can change or withdraw that choice any time in <strong>Settings → Privacy → Ad privacy options</strong> — refusing doesn't disable any feature. Anywhere else, you can reset or delete your advertising ID in <strong>Android Settings → Privacy → Ads</strong>. Ads never use anything from your files to target you.</p>
   </div>
 
   <div class="card">
-    <h3>Is it safe to use the Wi-Fi file transfer / WebDAV / FTP server?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Is it safe to use the Wi-Fi file transfer / WebDAV / FTP server?</h3>
     <p>On a home network you trust, yes — access is protected by a PIN you set, with lockout after repeated wrong attempts. But while a server is running, the folder you picked is reachable by anything on the same network that has your device's address and the PIN, and the browser and FTP modes don't encrypt traffic. <strong>Don't run it on public, guest, café, airport or hotel Wi-Fi.</strong> Stop the server when you're done — the ongoing notification shows you whenever one is running.</p>
   </div>
 
   <div class="card">
-    <h3>Can I connect Google Drive?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Can I connect Google Drive?</h3>
     <p>Not in this version. Cloud accounts you can connect are <strong>Dropbox</strong> and <strong>Microsoft OneDrive</strong>. You sign in with that provider, never with us. Google Drive is not available right now.</p>
   </div>
 
   <div class="card">
-    <h3>Where does the TV, radio and music content come from?</h3>
+    <h3><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#circle-help"/></svg>Where does the TV, radio and music content come from?</h3>
     <p>We don't host or control any of it. The app reads publicly published catalogues — iptv-org for free-to-air channels, Radio Browser for stations, Audius, the Internet Archive and Pexels for music and video — and when you play something, your device connects straight to that third party's own stream. Availability, quality and licensing are entirely up to whoever operates the stream, and a channel appearing in a list isn't a claim by us that it's licensed where you are. Rights holders can reach us at the address in <a href="terms-of-service.html#copyright">Section 19 of the Terms</a>.</p>
   </div>
   </div>
 
+  </main>
+
   <footer class="site">
-    <p>NTFS File Manager · <a href="/">Home</a> · <a href="expertise.html">Expertise</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="mark" src="assets/favicon.png" width="40" height="40" alt="" loading="lazy">
+          <span class="brand-text"><span class="brand-name">NTFS File Manager</span></span>
+        </a>
+        <p>Open NTFS and exFAT USB drives on Android with full read and write. No PC, no root, no account of ours.</p>
+        <a class="button small" href="https://play.google.com/store/apps/details?id=com.ntfshelper" target="_blank" rel="noopener" data-ga="play_store_click" data-ga-location="footer"><svg class="icon" aria-hidden="true"><use href="assets/vendor/lucide-sprite.svg#play"/></svg>Google Play</a>
+      </div>
+      <nav aria-label="Product">
+        <p class="footer-h">Product</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#plans">Free &amp; Premium</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <p class="footer-h">Support</p>
+        <ul>
+          <li><a href="help.html">Help &amp; FAQ</a></li>
+          <li><a href="help.html#feedback">Send feedback</a></li>
+          <li><a href="https://github.com/jrvaghela72/ntfsfilemanager/issues" target="_blank" rel="noopener" data-ga="github_issues_click" data-ga-location="footer">GitHub issues</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <p class="footer-h">Legal</p>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NTFS File Manager</p>
+      <p>Made with <a href="https://open-props.style/" target="_blank" rel="noopener">Open Props</a>, <a href="https://lucide.dev/" target="_blank" rel="noopener">Lucide</a> and <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a></p>
+    </div>
   </footer>
 
 </div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
